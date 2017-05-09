@@ -5,7 +5,7 @@
   "main": "dev.server.js",
   "scripts": {
     "start": "cross-env node scripts/start.js",
-    "build": "cross-env node scripts/build.js",
+    "build": "webpack -p --config ./config/webpack.config.prod.js",
     "test": "cross-env node scripts/test.js",
     "lint": "tslint 'src/**/*.{ts,tsx}'"
   },
