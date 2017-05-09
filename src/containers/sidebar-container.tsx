@@ -2,7 +2,7 @@ import {connect, Dispatch} from 'react-redux';
 import {selectIssue} from '../actions/index';
 import {bindActionCreators} from 'redux';
 import {IIssue} from '../model';
-import IssueList from '../components/issue-list';
+import Sidebar from '../components/sidebar';
 
 interface IStateProps {
   issues: IIssue[];
@@ -22,4 +22,4 @@ function mapDispatchToProps(dispatch: Dispatch<IDispatchProps>): IDispatchProps 
   return bindActionCreators({selectIssue}, dispatch);
 }
 
-export default connect<IStateProps, IDispatchProps, {}>(mapStateToProps, mapDispatchToProps)(IssueList);
+export default connect<IStateProps, IDispatchProps, {}>(mapStateToProps, mapDispatchToProps)(Sidebar);

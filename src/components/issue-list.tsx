@@ -3,7 +3,9 @@ import {IIssue} from '../model';
 import glamorous from 'glamorous';
 
 const HandCursorStyle = glamorous.span({
-  cursor: 'pointer'
+  cursor: 'pointer',
+  listStyleType: 'none'
+//  padding: '4px 1px'
 });
 
 interface IProps {
@@ -21,14 +23,14 @@ export default class IssueList extends React.Component<IProps, IState> {
   renderList() {
     if (!this.props.issues || this.props.issues.length === 0) {
       return (
-        <li className="list-group-item">No issues are available</li>
+        <li className="">No issues are available</li>
       );
     }
     return this.props.issues.map((issue) => {
       return (
-        <HandCursorStyle><li key={issue.id}
+        <HandCursorStyle key={issue.id}><li style={{border: '1px solid black', padding: '5px'}} key={issue.id}
         onClick={() => this.props.selectIssue(issue)}
-        className="list-group-item hand-cursor">{issue.name}</li></HandCursorStyle>
+        className="hand-cursor">{issue.name}</li></HandCursorStyle>
       );
     });
   }

@@ -16,7 +16,7 @@ class CallDetail extends React.Component<IProps, IState> {
       );
     }
     return (
-      <div>
+      <div style={{ 'flex-basis': '75%', 'paddingRight': '10%'}}>
         <h3>{this.props.issue.name}</h3>
         <div>Call this office:</div>
         <h4>{this.props.issue.contacts ? this.props.issue.contacts[0].Name : ''}</h4>
