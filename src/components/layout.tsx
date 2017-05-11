@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Navigation from './navigation';
 import glamorous from 'glamorous';
+import '../styles/app.css';
 
 interface IProps {
   readonly title: string;
