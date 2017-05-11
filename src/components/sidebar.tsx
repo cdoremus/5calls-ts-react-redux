@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {IIssue} from '../model';
 import IssueList from './issue-list';
+import LocationContainer from '../containers/location-container';
 
 interface IProps {
   readonly issues: IIssue[];
@@ -15,6 +16,7 @@ export default class Sidebar extends React.Component<IProps, IState> {
 
     return (
       <div style={{padding: '10 50', flexBasis: '25%'}}>
+        <LocationContainer />
         <IssueList issues={this.props.issues} selectIssue={this.props.selectIssue}/>
       </div>
     );
